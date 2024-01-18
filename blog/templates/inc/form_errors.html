@@ -1,0 +1,35 @@
+{% if form.username and form.username.errors %}
+  <div class="alert-container alert-danger">
+    <h4 class="alert-heading">خطا در نام کاربری</h4>
+    {% for error in form.username.errors %}
+      <p class="alert-message">{{ error }}</p>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if form.email and form.email.errors %}
+  <div class="alert-container alert-danger">
+    <h4 class="alert-heading">خطا در ایمیل</h4>
+    {% for error in form.email.errors %}
+      <p class="alert-message">{{ error }}</p>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if form.password and form.password.errors %}
+  <div class="alert-container alert-danger">
+    <h4 class="alert-heading">خطا در رمز عبور</h4>
+    {% for error in form.password.errors %}
+      <p class="alert-message">{{ error }}</p>
+    {% endfor %}
+  </div>
+{% endif %}
+
+{% if form.confirm_password and form.confirm_password.errors %}
+  <div class="alert-container alert-danger">
+    <h4 class="alert-heading">خطا در تأیید رمز عبور</h4>
+    {% for error in form.confirm_password.errors %}
+      <p class="alert-message">{{ error }}</p>
+    {% endfor %}
+  </div>
+{% endif %}

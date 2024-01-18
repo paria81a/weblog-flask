@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="register-form">
+    <h2 class="register-title">ایجاد حساب کاربری</h2>
+    {% include 'inc/form_errors.html' %}
+
+    <form action="" method="post">
+      {{ form.csrf_token }}
+
+      <div class="form-group">
+        <label for="username" class="form-label">نام کاربری</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="نام کاربری خود را ایجاد کنید" value="{{ form.username.data }}" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">ایمیل</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="آدرس ایمیل خود را وارد کنید" value="{{ form.email.data }}" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">رمز عبور</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="یک رمز عبور قوی وارد کنید" required>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm_password" class="form-label">تأیید رمز عبور</label>
+        <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="رمز عبور خود را دوباره وارد کنید" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">ایجاد حساب کاربری</button>
+    </form>
+  </div>
+{% endblock %}

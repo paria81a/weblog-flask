@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روانشناسی کودکان</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</head>
+<body>
+    <div dir="rtl">  
+        {% include 'inc/navbar.html' %}
+        <div class="jumbotron py-5 text-center">
+            <h1 class="display-4">روانشناسی کودکان: جذاب و دل‌انگیز</h1>
+            <p class="lead">سفری به دنیای شگفت‌انگیز روانشناسی کودکان</p>
+        </div>
+        <div class="container">
+            {% include 'inc/messages.html' %}
+            {% block content %}{% endblock content %}
+        </div>
+    </div>
+</body>
+</html>

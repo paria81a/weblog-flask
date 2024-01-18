@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="post-form">
+
+    <h2 class="post-form-title">ایجاد پست جدید</h2>
+
+    <form action="" method="post">
+      {{ form.csrf_token }}
+
+      <div class="mb-3">
+        <label for="title" class="form-label">عنوان</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="عنوان پست خود را وارد کنید" value="{{ form.title.data }}">
+      </div>
+
+      <div class="mb-3">
+        <label for="content" class="form-label">محتوا</label>
+        <textarea class="form-control" id="content" name="content" rows="5">{{ form.content.data }}</textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">ایجاد پست</button>
+    </form>
+
+  </div>
+
+{% endblock %}

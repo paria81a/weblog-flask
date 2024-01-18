@@ -1,0 +1,116 @@
+/* base.html */
+body {
+    background-image: url('/static/images/lo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: 'B Titr', Tahoma, sans-serif;
+}
+
+
+
+/* home.html */
+
+.card-columns {
+    column-count: 1;
+    column-gap: 1rem;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: rgba(255, 255, 255, 0.605); /* شفافیت در حالت عادی */
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3); /* حالت کادر در حالت هاور */
+    background-color: rgba(255, 255, 255, 1); /* شفافیت در حالت هاور */
+}
+
+.card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.welcome-title {
+    font-family: 'B Titr', Tahoma, sans-serif;
+    color: #68677f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.welcome-title:hover {
+    color: #077b62;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+/* detail.html */
+
+.post-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.post-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.post-action {
+    margin-bottom: 15px;
+}
+
+.post-header {
+    text-align: right;
+}
+
+.post-title {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    color: #777;
+    font-size: 14px;
+}
+
+.post-content {
+    line-height: 1.6;
+    color: #555;
+}
+
+.post-share {
+    margin-top: 20px;
+}
+
+.social-share a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.social-share a:hover {
+    background-color: #333;
+}
+
+

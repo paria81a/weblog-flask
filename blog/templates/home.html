@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center mt-5 mb-4 welcome-title">{{ current_user.username }}</h1>
+
+    <div class="card-columns">
+        {% for post in posts %}
+            <div class="card mt-3">
+                <a href="{{ url_for('detail', post_id=post.id) }}" class="card-body text-decoration-none text-dark">
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <p class="card-text">{{ post.brief_content }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

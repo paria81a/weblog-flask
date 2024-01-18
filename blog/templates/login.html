@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="login-form">
+    <h2 class="login-title">ورود به حساب کاربری</h2>
+    {% include 'inc/form_errors.html' %}
+
+    <form action="" method="post">
+      {{ form.csrf_token }}
+
+      <div class="form-group">
+        <label for="email" class="form-label">ایمیل</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="آدرس ایمیل خود را وارد کنید" value="{{ form.email.data }}" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">رمز عبور</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="رمز عبور خود را وارد کنید" required>
+      </div>
+
+      <div class="form-group form-check">
+        <label for="remember" class="form-check-label">
+          {{ form.remember.label }}
+          {{ form.remember }}
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">ورود</button>
+    </form>
+  </div>
+{% endblock %}
